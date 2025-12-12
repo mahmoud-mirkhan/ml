@@ -1,0 +1,17 @@
+# R, Show the memory address of the variable and plot a point 
+library(pryr) # install.packages("pryr")
+x <- 1
+address(x) 
+plot(1, col = c("#800080"), pch = 16, cex = 3, xlab = "", ylab = "", axes = FALSE)   
+# ans: [1] "0x24fb4767780" 
+# ----------------------------------------------------------
+
+# Python, Show the memory address of the variable and plot a point
+import matplotlib.pyplot as plt
+x = 1
+print(f"The memory address of x is: {hex(id(x))}")
+x = [1]
+y = [0]  # You can set y to any value, e.g., 0
+# Plot the point with 'o' specifies a circular marker.
+plt.plot(x, y, 'o', label='Point (1, 0)')  
+plt.show()
