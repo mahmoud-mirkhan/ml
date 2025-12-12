@@ -1,0 +1,40 @@
+# R, Function and Recursive Function 
+f2 = function(txt, n = 1) {
+  if (n >= 1){
+    for(i in 1:n)  
+      print(txt) } } 
+f2("Hello World", 2)
+# --------------------
+f3 = function(txt, n = 1) {
+  if (n <= 1)
+    print(txt)
+  else {
+    print(txt)
+    f3(txt, n-1) } }
+f3('Hello World', 2)
+
+# Python, Recursive Function 
+def f3(txt, n = 1):
+  if n <= 1:
+    print(txt)
+  else:
+    print(txt)
+    f3(txt, n-1)
+
+f3('Hello World', 2) 
+
+% Matlab, Recursive Function, save with f3.m and put in Documents/Matlab 
+function [y] = f3(txt, n)
+  if ~exist('n')
+    n = 1;
+  end 
+  if ( n <= 1 )
+      disp(txt)
+  else
+      disp(txt)
+      f3(txt, n-1)
+  end
+end  
+
+% Run this command in Matlab    
+f3("Hello World",2) 
