@@ -1,3 +1,7 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
 # R, Show the memory address of the variable and plot a point 
 library(pryr) # install.packages("pryr")
 x <- 1
