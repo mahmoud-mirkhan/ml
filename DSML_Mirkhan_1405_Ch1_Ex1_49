@@ -1,0 +1,19 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
+# R, show iris data, The file is in the R software
+head(iris) # help(iris)
+iris1 = read.table("d:/data/iris.csv", header=TRUE, sep=",")
+write.csv(iris, file="d:/data/iris.csv", row.names=FALSE)
+plot(iris[,1], iris[,3], col=iris[,5], pch=16)
+
+# Python, Show iris data
+import pandas as pd
+iris1 = pd.read_csv("d:/data/iris.csv") # or read file, iris_1
+iris1.head()
+
+% Matlab, Show iris data
+iris1 = iris_dataset; size(iris1)
+iris1(:,1:6)
+iris2 = readtable("d:/data/iris.csv"); iris2(1:6,:) 
