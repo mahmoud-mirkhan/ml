@@ -1,0 +1,23 @@
+# R, Functions of Numbers 
+x = 3.14159
+print(round(x, 3)) 
+floor(x); floor(x) + 1 
+library(MASS)
+fractions(3.14)   # ans: 157/50
+print(Inf) 
+
+# Python, Functions of Numbers 
+import numpy as np 
+x = 3.14159
+print(np.round(x, 3))   
+np.floor(x); np.ceil(x)   
+from fractions import Fraction
+print(Fraction(3.14)) # ans: ! 7070651414971679/2251799813685248
+print(float('inf')    
+
+% Matlab, Functions of Numbers 
+x = 3.14159;
+disp(round(x, 3))
+floor(x); ceil(x)
+rats(3.14)   % ans = '    157/50    ' 
+disp(Inf) 
