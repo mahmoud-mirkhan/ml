@@ -1,3 +1,7 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
 # R, Function and Recursive Function 
 f2 = function(txt, n = 1) {
   if (n >= 1){
