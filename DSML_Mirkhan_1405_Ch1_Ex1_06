@@ -1,3 +1,7 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
 # R, Print negative and positive numbers in vector. 
 a <- c(1, -2, 3)
 for(i in 1:3) {
