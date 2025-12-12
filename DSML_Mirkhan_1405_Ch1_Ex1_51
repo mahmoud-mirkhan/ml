@@ -1,0 +1,42 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
+# Python, MNIST data of handwriting set of images 
+import tensorflow as tf
+import numpy as np
+from tensorflow.keras.datasets import mnist
+from matplotlib import pyplot
+(train_X, train_y), (test_X, test_y) = mnist.load_data()
+i = 31   # Showing digit 8 with index 31
+pyplot.imshow(train_X[i])
+pyplot.show()
+pyplot.imshow(train_X[i], cmap=pyplot.get_cmap('gray'))
+pyplot.show()
+print(train_X[i])
+print(np.shape(train_X[i]))
+
+% Matlab, MNIST data of handwriting set of images 
+load('d:/data/mnist.mat'); help('mnist.mat')
+size(training.images)
+size(test.images) %image (training.images(:,:,18)*255);
+image (rescale(training.images(:,:,18),0,255));
+axis square equal
+colormap(gray) % Change color Image to Gray Style
+colorbar
+training.labels(18)
+title (sprintf ("Digit: %d", training.labels(18)))
+training; training.images(:,:,18)*255
+
+# R, MNIST data of handwriting set of images 
+data <- read.csv("d:/data/train.csv")
+dim(data); head(data[1:6]); unique(unlist(data[1]))
+min(data[2:785]); max(data[2:785])
+sample_8 <- matrix(as.numeric(data[31,-1]), nrow=28, byrow=TRUE)
+# Rotate the matrix by reversing elements in each column
+rotate <- function(x) t(apply(x, 2, rev)) 
+par(mfrow = c(1,2))
+image(rotate(sample_8))
+image(rotate(sample_8), col = grey.colors(255))
+# Write matrix data to clipboard and paste to excel
+write.table(sample_8, 'clipboard', sep='\t')
