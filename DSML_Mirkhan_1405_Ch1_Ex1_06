@@ -1,0 +1,43 @@
+# R, Print negative and positive numbers in vector. 
+a <- c(1, -2, 3)
+for(i in 1:3) {
+  if(a[i] >= 0)
+    print(paste(a[i], " is positive.")) 
+  else
+    print(paste(a[i], " is negative.")) }
+
+# Python, Print negative and positive numbers in vector. 
+import numpy as np
+a = np.array([1, -2, 3])
+for i in np.arange(3):
+  if(a[i] >= 0):
+    print(a[i], " is positive.")
+  else:
+    print(a[i], " is negative.")
+
+% Matlab, Print negative and positive numbers in vector. 
+a = [1 -2 3];
+for(i = 1:3)
+  if(a(i) >= 0)
+    sprintf("%d is positive.", a(i))
+  else
+    sprintf("%d is negative.", a(i))
+  end
+end
+# ----------------------------------------
+
+# R, Print negative and positive numbers in vector. 
+a <- c(1, -2, 3)
+print(a[which(a >= 0)]) 
+print(a[which(a < 0)]) 
+
+# Python, Print negative and positive numbers in vector.   
+import numpy as np
+a = np.array([1, -2, 3])
+print(a[np.where(a >= 0)])
+print(a[np.where(a < 0)])   
+ 
+% Matlab, Print negative and positive numbers in vector. 
+a = [1 -2 3];
+a(find(a >= 0))
+a(find(a < 0))
