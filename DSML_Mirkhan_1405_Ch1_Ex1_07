@@ -1,0 +1,90 @@
+
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
+# Example 1.7
+# R, Sequence of even numbers from 1 to 10. 
+seq1 = 0
+i = 1; j = 2
+while(j <= 10) {
+  seq1[i] = j
+  i = i + 1
+  j = j + 2 }
+print(seq1) 
+
+# R, Sequence of even numbers from 1 to 10. 
+for(i in seq(2,10,2)) 
+  print(i)
+
+# R, Sequence of even numbers from 1 to 10. 
+seq(2,10,2)
+
+# R, Show sequence 
+sequence = function(from = 1, to = 1, by = 1) {
+  i = 0
+  while(from + i * by <= to) {
+    print(from + i * by)
+    i = i + 1 } }
+sequence(2,10,2)
+
+# Example 1.7
+# Python, Sequence of even numbers from 1 to 10. 
+seq1 = []
+i = 1; j = 2
+while j <= 10:
+  seq1.append(j)
+  i = i + 1
+  j = j + 2 
+
+
+print(seq1)
+
+# Python, Sequence of even numbers from 1 to 10.
+import numpy as np 
+for i in np.arange(2,11,2):
+  print(i)
+
+
+# Python, Sequence of even numbers from 1 to 10.
+np.arange(2,11,2) 
+
+# Python, Show sequence 
+def sequence(start = 1, end = 1, inc = 1):
+  i = 0
+  while start + i * inc <= end:
+    print(start + i * inc)
+    i = i + 1 
+
+sequence(2,10,2)
+
+% Example 1.7
+% Matlab, Sequence of even numbers from 1 to 10. 
+seq1 = 0;
+i = 1; j = 2;
+while(j <= 10) 
+  seq1(i) = j;
+  i = i + 1;
+  j = j + 2;
+end
+disp(seq1)
+
+% Matlab, Sequence of even numbers from 1 to 10. 
+for(i = 2:2:10)
+  disp(i)
+end
+
+% Matlab, Sequence of even numbers from 1 to 10. 
+2:2:10   
+
+% Matlab, save this code in sequence.m and run sequence(2,10,2)
+function [y] = sequence(from, to, by)
+  i = 0;
+  while(from + i * by <= to) 
+    y(i+1) = from + i * by;
+    i = i + 1; 
+    end
+end
+
+% sequence.m 
+sequence(2,10,2)
