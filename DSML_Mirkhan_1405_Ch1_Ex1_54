@@ -1,0 +1,62 @@
+# Data Science and Machine Learning 
+# Seyed Mahmoud Mirkhan, 1404
+# Chapter 1 Computer Programming
+
+% Matlab, List of name and image of flowers 
+flowers = {}; 
+flowers_name = {}  
+flowers_name{1} = "Sunflower";   
+flowers{1} =  "d:/data/flower_photos/sunflowers/678714585_addc9aaaef.jpg";
+flowers_name{2} = " Rose ";   
+flowers{2} = "d:/data/flower_photos/roses/5402157745_a384f0583d_n.jpg";
+for (i = 1:2)
+  a = imread(flowers{i});
+  subplot(1,2,i)
+  imshow(a);
+  title(flowers_name{i}); 
+end
+
+# R, List of name and image of flowers 
+flowers = list(); flowers_name = list()
+flowers_name[[1]] = "Sunflower"   
+flowers[[1]]="d:/data/flower_photos/sunflowers/678714585_addc9aaaef.jpg"
+flowers_name[[2]] = " Rose "   
+flowers[[2]] = "d:/data/flower_photos/roses/5402157745_a384f0583d_n.jpg"
+# ------------------------------------------     
+library("jpeg"); par(mfrow=c(1,2))  
+for (i in 1:2){  
+  a <- readJPEG(flowers[[i]])
+  plot(0:1, 0:1, type="n", ann=FALSE, axes=FALSE)
+  rasterImage(a,0,0,1,1) 
+  title(flowers_name[[i]]) }
+par(mfrow=c(1,1))   
+# ------------------------------------------     
+library(imager); 
+par(mfrow=c(1,2))  
+for (i in 1:2){  
+  a <- load.image(flowers[[i]])
+  plot(a)
+  title(flowers_name[[i]]) }
+par(mfrow=c(1,1)) 
+
+
+# Python, List of dictionaries with name and image of flowers 
+flowers = [
+    {"name": "Sunflower", "image": "d:/data/flower_photos/sunflowers/678714585_addc9aaaef.jpg"},
+    {"name": "Rose", "image": "d:/data/flower_photos/roses/5402157745_a384f0583d_n.jpg"}]
+from matplotlib import pyplot as plt
+from matplotlib import image as mpimg
+for flower in flowers:
+    a = mpimg.imread(flower["image"])
+    plt.title(flower["name"]) 
+    plt.imshow(a)
+    plt.show()      
+    
+fig, (ax1, ax2) = plt.subplots(1, 2)
+a1 = mpimg.imread(flowers[0]["image"])
+ax1.set_title(flowers[0]["name"]) 
+ax1.imshow(a1) 
+a2 = mpimg.imread(flowers[1]["image"])
+ax2.set_title(flowers[1]["name"]) 
+ax2.imshow(a2)
+plt.show()
